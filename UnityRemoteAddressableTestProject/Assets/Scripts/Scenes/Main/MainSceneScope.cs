@@ -1,3 +1,7 @@
+using Cysharp.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
+
 namespace TheOneStudio.HyperCasual.Scenes.Main
 {
     using System.Linq;
@@ -19,7 +23,15 @@ namespace TheOneStudio.HyperCasual.Scenes.Main
                 .WithParameter(container => typeof(IGameState).GetDerivedTypes().Select(type => (IGameState)container.Instantiate(type)).ToList())
                 .AsInterfacesAndSelf();
 
-            builder.InitScreenManually<HomeSimpleScreenPresenter>();
+            // builder.InitScreenManually<HomeSimpleScreenPresenter>();
+        }
+
+        protected override async void Awake()
+        {
+            base.Awake();
+
+            var cube = await Addressables.LoadAssetAsync<GameObject>("Cube");
+            Instantiate(cube);
         }
     }
 }
