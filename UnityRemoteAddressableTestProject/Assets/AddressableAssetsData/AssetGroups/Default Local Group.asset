@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: Default Local Group
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
-  m_Data:
-    m_SerializedData: []
   m_GUID: feb02fd4e6f03e9409035f216c623403
   m_SerializeEntries:
   - m_GUID: 1cf2193cd7fa83342a7e1da91ed98ecb
     m_Address: TheOneCheatView
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fcadb7324c2c6974fa66527a16e5fc3b
+    m_Address: AudioSource
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
